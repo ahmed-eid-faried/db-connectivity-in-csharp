@@ -1,0 +1,14 @@
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/db-connectivity-in-csharp
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/db-connectivity-in-csharp.deps.json
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/db-connectivity-in-csharp.runtimeconfig.json
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/db-connectivity-in-csharp.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/db-connectivity-in-csharp.pdb
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.AssemblyInfoInputs.cache
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.AssemblyInfo.cs
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.csproj.CoreCompileInputs.cache
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/refint/db-connectivity-in-csharp.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.pdb
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.genruntimeconfig.cache
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/ref/db-connectivity-in-csharp.dll
