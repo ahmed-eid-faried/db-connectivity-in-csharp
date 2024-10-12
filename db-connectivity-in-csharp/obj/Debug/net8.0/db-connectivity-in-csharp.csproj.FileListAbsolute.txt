@@ -12,3 +12,12 @@
 /Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.pdb
 /Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.genruntimeconfig.cache
 /Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/ref/db-connectivity-in-csharp.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/System.Data.SqlClient.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/runtimes/win-arm64/native/sni.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/runtimes/win-x64/native/sni.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/runtimes/win-x86/native/sni.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/bin/Debug/net8.0/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.csproj.AssemblyReference.cache
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-connectivity-in-csharp.sourcelink.json
+/Users/ahmedmady/Hard/GitHub/learn/db-connectivity-in-csharp/db-connectivity-in-csharp/obj/Debug/net8.0/db-conne.4C5724F0.Up2Date
