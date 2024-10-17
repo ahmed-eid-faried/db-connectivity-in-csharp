@@ -1,0 +1,8 @@
+C:\Users\AHMED MADY\source\repos\db-connectivity-in-csharp\db-connectivity-in-csharp\bin\Debug\db-connectivity-in-csharp.exe.config
+C:\Users\AHMED MADY\source\repos\db-connectivity-in-csharp\db-connectivity-in-csharp\bin\Debug\db-connectivity-in-csharp.exe
+C:\Users\AHMED MADY\source\repos\db-connectivity-in-csharp\db-connectivity-in-csharp\bin\Debug\db-connectivity-in-csharp.pdb
+C:\Users\AHMED MADY\source\repos\db-connectivity-in-csharp\db-connectivity-in-csharp\obj\Debug\db-connectivity-in-csharp.csproj.AssemblyReference.cache
+C:\Users\AHMED MADY\source\repos\db-connectivity-in-csharp\db-connectivity-in-csharp\obj\Debug\db-connectivity-in-csharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\AHMED MADY\source\repos\db-connectivity-in-csharp\db-connectivity-in-csharp\obj\Debug\db-connectivity-in-csharp.csproj.CoreCompileInputs.cache
+C:\Users\AHMED MADY\source\repos\db-connectivity-in-csharp\db-connectivity-in-csharp\obj\Debug\db-connectivity-in-csharp.exe
+C:\Users\AHMED MADY\source\repos\db-connectivity-in-csharp\db-connectivity-in-csharp\obj\Debug\db-connectivity-in-csharp.pdb
