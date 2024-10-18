@@ -293,7 +293,8 @@ public class Program
         }
 
     }
-    static void ParameterizedQueryWithLike(){
+    static void ParameterizedQueryWithLike()
+    {
         Console.WriteLine("=====================SearchContactsStartsWith j==============");
         SearchContactsStartsWith("j");
         Console.WriteLine("=====================SearchContactsEndsWith e==============");
@@ -302,6 +303,26 @@ public class Program
         SearchContactsContainsWith("ae");
         Console.WriteLine("================================================================");
     }
+    static string RetrieveASingleValue(int ContactID)
+    {
+        SqlConnection connection = new SqlConnection(connectionString);
+        string query2 = "select FirstName from Contacts where Contacts.ContactID=@ContactID;";
+        SqlCommand command = new SqlCommand(query2, connection);
+         command.Parameters.AddWithValue("@ContactID", ContactID);
+        string FirstName = "";
+        try
+        {
+            connection.Open();
+            object value = command.ExecuteScalar();
+            FirstName = value.ToString();
+            connection.Close();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("error ==>> " + e.Message);
+        }
+        return FirstName;
+    }
 
     public static void Main()
     {
@@ -309,7 +330,8 @@ public class Program
         //ParameterizedQuery("john", 1);
         //ParameterizedQuery("john' and Contacts.LastName='Doe", 1);
         //ParameterizedQueryUnSave("john' and Contacts.LastName='Doe", 1);
-        ParameterizedQueryWithLike();
+        //ParameterizedQueryWithLike();
+        Console.WriteLine(RetrieveASingleValue(3));
         Console.ReadKey();
     }
 
