@@ -26,8 +26,8 @@ public class Program
         //ContactDataAccessClass.FindSingleContactView();
         //ContactDataAccessClass.InsertAddDataVeiw();
         //ContactDataAccessClass.RetrieveAutoNumberAfterInsertingAddingDataView();
-        ContactDataAccessClass.UpdateContactInfoView();
-
+        //ContactDataAccessClass.UpdateContactInfoView();
+        ContactDataAccessClass.DeleteContact(1);
         Console.ReadKey();
     }
 

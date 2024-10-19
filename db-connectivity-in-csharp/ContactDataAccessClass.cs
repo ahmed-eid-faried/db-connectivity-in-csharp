@@ -240,6 +240,34 @@ namespace db_connectivity_in_csharp
             };
             UpdateContactInfo(2, Contact);
         }
+        public static void DeleteContact(int contactID)
+        {
+            SqlConnection connection = new SqlConnection(Program.connectionString);
+            string query2 = "delete from Contacts where  Contacts.contactID=@contactID;";
+            SqlCommand command = new SqlCommand(query2, connection);
+            command.Parameters.AddWithValue("@contactID", contactID);
+            try
+            {
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    Console.WriteLine("Record Deleted successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Record Delete failed.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error ==>> " + e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
 
 
     }
