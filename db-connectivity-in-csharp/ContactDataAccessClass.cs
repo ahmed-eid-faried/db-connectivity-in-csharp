@@ -268,7 +268,35 @@ namespace db_connectivity_in_csharp
                 connection.Close();
             }
         }
-
+        public static void HandleInStatement(string ContactIDs)
+        {
+            SqlConnection connection = new SqlConnection(Program.connectionString);
+            string query = @"Delete Contacts 
+                                where ContactID in (" + ContactIDs + ")";
+            SqlCommand command = new SqlCommand(query, connection);
+            //command.Parameters.AddWithValue("@ContactIDs", ContactIDs);
+            try
+            {
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    Console.WriteLine("Record Deleted successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Record Delete failed.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error ==>> " + e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
 
     }
 }
