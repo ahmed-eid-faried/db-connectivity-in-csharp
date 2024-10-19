@@ -24,8 +24,8 @@ public class Program
         //ParameterizedQueryWithLikeClass.ParameterizedQueryWithLike();
         //Console.WriteLine(RetrieveASingleValueClass.RetrieveASingleValue(3));
         //ContactDataAccessClass.FindSingleContactView();
-        ContactDataAccessClass.InsertAddDataVeiw();
-
+        //ContactDataAccessClass.InsertAddDataVeiw();
+        ContactDataAccessClass.RetrieveAutoNumberAfterInsertingAddingDataView();
 
         Console.ReadKey();
     }

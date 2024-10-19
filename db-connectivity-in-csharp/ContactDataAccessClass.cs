@@ -117,8 +117,6 @@ namespace db_connectivity_in_csharp
                 connection.Close();
             }
         }
-
-
         public static void InsertAddDataVeiw()
         {
             stContact Contact = new stContact
@@ -131,6 +129,61 @@ namespace db_connectivity_in_csharp
                 countryID = 1
             };
             InsetContact(Contact);
+        }
+        public static int RetrieveInsetContact(stContact Contact)
+        {
+            SqlConnection connection = new SqlConnection(Program.connectionString);
+            string query2 = @"INSERT INTO Contacts
+           (FirstName, LastName, Email, Phone, Address, CountryID)
+           VALUES
+           (@FirstName, @LastName, @Email, @Phone, @Address, @CountryID);
+            Select SCOPE_IDENTITY();";
+            SqlCommand command = new SqlCommand(query2, connection);
+            command.Parameters.AddWithValue("@FirstName", Contact.firstName);
+            command.Parameters.AddWithValue("@LastName", Contact.lastName);
+            command.Parameters.AddWithValue("@Email", Contact.email);
+            command.Parameters.AddWithValue("@Phone", Contact.phone);
+            command.Parameters.AddWithValue("@Address", Contact.address);
+            command.Parameters.AddWithValue("@CountryID", Contact.countryID);
+            int InsertedID = -1;
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    Console.WriteLine($"Newly inserted ID: {insertedID}");
+                    InsertedID = insertedID;
+                }
+                else
+                {
+                    Console.WriteLine("Failed to retrieve the inserted ID.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error ==>> " + e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return InsertedID;
+
+        }
+
+        public static void RetrieveAutoNumberAfterInsertingAddingDataView()
+        {
+            stContact Contact = new stContact
+            {
+                firstName = "AHMED22 ",
+                lastName = "MADY333",
+                email = "m@example.com",
+                phone = "1234567890",
+                address = "123 Main Street",
+                countryID = 1
+            };
+            Console.WriteLine(RetrieveInsetContact(Contact));
         }
     }
 }
