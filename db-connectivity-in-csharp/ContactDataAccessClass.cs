@@ -74,20 +74,20 @@ namespace db_connectivity_in_csharp
         public static void InsetContact(stContact Contact)
         {
             SqlConnection connection = new SqlConnection(Program.connectionString);
-            string query2 = @"INSERT INTO [dbo].[Contacts]
-           ([FirstName]
-           ,[LastName]
-           ,[Email]
-           ,[Phone]
-           ,[Address]
-           ,[CountryID])
+            string query2 = @"INSERT INTO Contacts
+           (FirstName,
+            LastName,
+            Email,
+            Phone,
+            Address,
+            CountryID)
      VALUES
            (@FirstName, 
             @LastName, 
             @Email, 
             @Phone, 
             @Address, 
-            @CountryID,);";
+            @CountryID);";
             SqlCommand command = new SqlCommand(query2, connection);
             command.Parameters.AddWithValue("@FirstName", Contact.firstName);
             command.Parameters.AddWithValue("@LastName", Contact.lastName);
@@ -101,11 +101,11 @@ namespace db_connectivity_in_csharp
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    Console.WriteLine("Inset Contact is Successfully");
+                    Console.WriteLine("Record inserted successfully.");
                 }
                 else
                 {
-                    Console.WriteLine("Inset Contact is Failed");
+                    Console.WriteLine("Record insertion failed.");
                 }
             }
             catch (Exception e)
