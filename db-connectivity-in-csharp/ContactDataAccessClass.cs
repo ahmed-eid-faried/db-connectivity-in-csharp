@@ -50,7 +50,6 @@ namespace db_connectivity_in_csharp
             }
             return isFound;
         }
-
         public static void FindSingleContactView()
         {
 
@@ -171,7 +170,6 @@ namespace db_connectivity_in_csharp
             return InsertedID;
 
         }
-
         public static void RetrieveAutoNumberAfterInsertingAddingDataView()
         {
             stContact Contact = new stContact
@@ -185,5 +183,64 @@ namespace db_connectivity_in_csharp
             };
             Console.WriteLine(RetrieveInsetContact(Contact));
         }
+        public static void UpdateContactInfo(int ContactID, stContact Contact)
+        {
+            SqlConnection connection = new SqlConnection(Program.connectionString);
+            string query2 = @"UPDATE Contacts
+           SET
+           Contacts.FirstName=@FirstName,
+           Contacts.LastName=@LastName,
+           Contacts.Email=@Email,
+           Contacts.Phone=@Phone,
+           Contacts.Address=@Address,
+           Contacts.CountryID=@CountryID
+           WHERE Contacts.ContactID=@ContactID";
+            SqlCommand command = new SqlCommand(query2, connection);
+            command.Parameters.AddWithValue("@FirstName", Contact.firstName);
+            command.Parameters.AddWithValue("@LastName", Contact.lastName);
+            command.Parameters.AddWithValue("@Email", Contact.email);
+            command.Parameters.AddWithValue("@Phone", Contact.phone);
+            command.Parameters.AddWithValue("@Address", Contact.address);
+            command.Parameters.AddWithValue("@CountryID", Contact.countryID);
+            command.Parameters.AddWithValue("@ContactID", ContactID);
+            try
+            {
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    Console.WriteLine("Record Updated successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Record Upadate failed.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error ==>> " + e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+        public static void UpdateContactInfoView()
+        {
+            stContact Contact = new stContact
+            {
+                firstName = "AHMED22 ",
+                lastName = "MADY333",
+                email = "m@example.com",
+                phone = "1234567890",
+                address = "123 Main Street",
+                countryID = 1
+            };
+            UpdateContactInfo(2, Contact);
+        }
+
+
     }
 }
