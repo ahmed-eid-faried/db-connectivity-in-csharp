@@ -16,14 +16,15 @@ public class Program
 
     public static void Main()
     {
-        PrintAllContacts.PrintAllContacts1();
-        PrintAllContacts.PrintAllContacts2();
-        ParameterizedQueryClass.ParameterizedQuery("john", 1);
-        ParameterizedQueryClass.ParameterizedQuery("john' and Contacts.LastName='Doe", 1);
-        ParameterizedQueryClass.ParameterizedQueryUnSave("john' and Contacts.LastName='Doe", 1);
-        ParameterizedQueryWithLikeClass.ParameterizedQueryWithLike();
-        Console.WriteLine(RetrieveASingleValueClass.RetrieveASingleValue(3));
-        ContactDataAccessClass.FindSingleContactView();
+        //PrintAllContacts.PrintAllContacts1();
+        //PrintAllContacts.PrintAllContacts2();
+        //ParameterizedQueryClass.ParameterizedQuery("john", 1);
+        //ParameterizedQueryClass.ParameterizedQuery("john' and Contacts.LastName='Doe", 1);
+        //ParameterizedQueryClass.ParameterizedQueryUnSave("john' and Contacts.LastName='Doe", 1);
+        //ParameterizedQueryWithLikeClass.ParameterizedQueryWithLike();
+        //Console.WriteLine(RetrieveASingleValueClass.RetrieveASingleValue(3));
+        //ContactDataAccessClass.FindSingleContactView();
+        ContactDataAccessClass.InsertAddDataVeiw();
 
 
         Console.ReadKey();

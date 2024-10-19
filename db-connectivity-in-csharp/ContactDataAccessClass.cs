@@ -21,7 +21,7 @@ namespace db_connectivity_in_csharp
         }
         public static bool FindSingleContact(ref stContact Contact, int contactID)
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(Program.connectionString);
             string query2 = "select * from Contacts where  Contacts.contactID=@contactID;";
             SqlCommand command = new SqlCommand(query2, connection);
             command.Parameters.AddWithValue("@contactID", contactID);
@@ -70,6 +70,67 @@ namespace db_connectivity_in_csharp
                 Console.WriteLine($"Contact ID is Not Found");
 
             }
+        }
+        public static void InsetContact(stContact Contact)
+        {
+            SqlConnection connection = new SqlConnection(Program.connectionString);
+            string query2 = @"INSERT INTO [dbo].[Contacts]
+           ([FirstName]
+           ,[LastName]
+           ,[Email]
+           ,[Phone]
+           ,[Address]
+           ,[CountryID])
+     VALUES
+           (@FirstName, 
+            @LastName, 
+            @Email, 
+            @Phone, 
+            @Address, 
+            @CountryID,);";
+            SqlCommand command = new SqlCommand(query2, connection);
+            command.Parameters.AddWithValue("@FirstName", Contact.firstName);
+            command.Parameters.AddWithValue("@LastName", Contact.lastName);
+            command.Parameters.AddWithValue("@Email", Contact.email);
+            command.Parameters.AddWithValue("@Phone", Contact.phone);
+            command.Parameters.AddWithValue("@Address", Contact.address);
+            command.Parameters.AddWithValue("@CountryID", Contact.countryID);
+            try
+            {
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    Console.WriteLine("Inset Contact is Successfully");
+                }
+                else
+                {
+                    Console.WriteLine("Inset Contact is Failed");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error ==>> " + e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
+        public static void InsertAddDataVeiw()
+        {
+            stContact Contact = new stContact
+            {
+                firstName = "AHMED",
+                lastName = "MADY",
+                email = "m@example.com",
+                phone = "1234567890",
+                address = "123 Main Street",
+                countryID = 1
+            };
+            InsetContact(Contact);
         }
     }
 }
